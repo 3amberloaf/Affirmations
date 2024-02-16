@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Affirmation Generator!</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Quick inline style for fade-in effect */
@@ -16,44 +15,48 @@
             to { opacity: 1; }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const affirmationDisplay = document.querySelector('.affirmation strong');
-            const button = document.querySelector('button');
-        
-            const affirmations = [
-                "You are capable of achieving greatness.",
-                "Today is going to be a good day.",
-                "You are brimming with energy and overflowing with joy.",
-                "Your body is healthy; your mind is brilliant; your soul is tranquil."
-                // Add more affirmations as desired
-            ];
-        
-            function getRandomAffirmation() {
-                return affirmations[Math.floor(Math.random() * affirmations.length)];
-            }
-        
-            button.addEventListener('click', function() {
-                const affirmation = getRandomAffirmation();
-                affirmationDisplay.textContent = affirmation;
-                // Optional: Add a class to animate the new affirmation appearing
-                affirmationDisplay.classList.remove('fade-in');
-                void affirmationDisplay.offsetWidth; // Trigger reflow
-                affirmationDisplay.classList.add('fade-in');
-            });
-        });
-        </script>
-        
+    <title>Your Website Title</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Affirmation Generator!</h1>
-    </header>
-    <main>
-        <p>Your affirmation for today is:</p>
-        <div class="affirmation fade-in">
-            <strong><%= affirmation %></strong>
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="Company Logo">
+            </a>
         </div>
-        <button
-
         
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#food">FOOD</a></li>
+                <li><a href="#places">PLACES</a></li>
+                <li><a href="#contact">CONTACT ME</a></li>
+            </ul>
+        </nav>
+        <div class="language-switch">
+            <!-- Your language switch here -->
+        </div>
+
+    </header>
+    
+    <main class="fade-in">
+        <!-- Main content goes here -->
+        <section id="about">
+            <!-- About section content -->
+        </section>
+        <section id="food">
+            <!-- Food section content -->
+        </section>
+        <section id="places">
+            <!-- Places section content -->
+        <section id="contact">
+                <!-- Places section content -->    
+        </section>
+        <!-- Add more sections as needed -->
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

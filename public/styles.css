@@ -1,111 +1,85 @@
 /* Reset default margin and padding */
-body, h1, p, button {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensure padding and border are included in total width and height */
 }
 
-/* Set background color and font styles */
+/* Header styles with light background and brand logo */
+header {
+    background-color: #fceed1; /* Light sandy background for the header */
+    color: #5a4638; /* Dark brown text color for contrast */
+    padding: 20px; /* Adjust the padding to match your design */
+    display: flex;
+    justify-content: space-between; /* Distribute space between menu items */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Needed for absolute positioning of elements */
+}
+
+/* Navigation menu styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none; /* Remove default list styles */
+    display: flex;
+    gap: 100px; /* Space between menu items */
+}
+
+nav ul li {
+    /* Styles for each menu item if needed */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #5a4638; /* Dark brown text color to match the header */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Logo styles */
+.logo img {
+    max-height: 50px; /* Adjust the size as needed */
+    width: auto; /* This will keep the aspect ratio intact */
+}
+
+/* Apply background color to the body */
 body {
-    background-color: #f0f4f8; /* Softer light gray background */
+    background-color: #e4d5b7; /* Warm sandy background for the body */
+    color: #5a4638; /* Dark brown text color for overall text */
     font-family: 'Roboto', sans-serif; /* Modern, clean font */
-    color: #333; /* Slightly darker text color for better readability */
     line-height: 1.6; /* Improve text readability */
 }
 
-/* Header styles with gradient background */
-header {
-    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Vibrant gradient background */
-    padding: 30px 20px;
-    text-align: center;
-    color: #fff;
-    border-bottom: 3px solid #5a009d; /* Complementary border color */
-}
-
-/* Main content styles with responsive design */
+/* Content styles */
 main {
-    margin: 30px 8%;
     padding: 20px;
-    max-width: 960px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle main shadow */
-    background: #fff; /* White background for contrast */
     border-radius: 8px; /* Soften edges */
-}
-
-/* Affirmation box enhancements */
-.affirmation {
-    background-color: #e8f0fe; /* Lighter, softer background */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin: 20px 0; /* Adjusted spacing */
-    text-align: center; /* Center affirmation text */
-}
-
-/* Enhanced affirmation text */
-.affirmation strong {
-    font-size: 26px;
-    color: #4a00e0; /* Deep, vibrant color */
-    display: block; /* Ensure it takes up the full width */
-    margin-bottom: 15px; /* Space below text */
 }
 
 /* Button styles with a modern look */
 button {
-    background-color: #00bcd4;
-    color: #fff;
+    background-color: #80634c; /* Darker sandy brown background for buttons */
+    color: #fff; /* White text color for buttons */
     border: none;
     padding: 15px 30px;
     border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: 18px; /* Larger text for better readability */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0097a7;
-    transform: scale(1.05); /* Slight increase in size on hover */
+    background-color: #665245; /* Slightly darker shade for button hover state */
 }
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
-    main {
-        margin: 20px;
-        padding: 15px;
+    nav ul {
+        gap: 20px; /* Reduce space between menu items on smaller screens */
     }
-    .affirmation {
-        padding: 20px;
-    }
-    button {
-        padding: 12px 20px;
+
+    .logo img {
+        max-height: 40px; /* Adjust logo size for smaller screens */
     }
 }
-
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-body {
-    /* Apply a dynamic gradient animation */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-
-}
-
-.affirmation:hover {
-    transform: scale(1.05); /* Slightly enlarge affirmation box on hover */
-    transition: transform 0.3s ease-in-out;
-}
-

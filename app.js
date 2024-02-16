@@ -8,20 +8,8 @@ app.set('view engine', 'ejs');
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Define a list of affirmations
-const affirmations = [
-    "You are loved.",
-    "You are worthy of all the good things in life.",
-    "You are capable of achieving your dreams.",
-    // Add more affirmations here
-];
-
 // Define a route to handle requests for the homepage
 app.get('/', (req, res) => {
-    // Generate a random affirmation
-    const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
-    // Render the 'index' template and pass the random affirmation to it
-    res.render('index', { affirmation: randomAffirmation });
 });
 
 // Start the server
