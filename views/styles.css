@@ -1,0 +1,55 @@
+/* Reset default margin and padding */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+    background-color: #711515; /* Light gray background */
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark gray text color */
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50; /* Green background */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* White text color */
+}
+
+/* Main content styles */
+main {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Affirmation styles */
+.affirmation {
+    background-color: #ffd9f3; /* White background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    background-color: #008CBA; /* Blue background */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+button:hover {
+    background-color: #005f78; /* Darker blue on hover */
+}
