@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3000;
 // Set the view engine to use EJS
 app.set('view engine', 'ejs');
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
 // Define a list of affirmations
 const affirmations = [
     "You are loved.",
