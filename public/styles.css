@@ -5,48 +5,56 @@
     box-sizing: border-box; /* Ensure padding and border are included in total width and height */
 }
 
-/* Header styles with light background and brand logo */
 header {
-    background-color: #fceed1; /* Light sandy background for the header */
-    color: #5a4638; /* Dark brown text color for contrast */
-    padding: 20px; /* Adjust the padding to match your design */
-    display: flex;
-    justify-content: space-between; /* Distribute space between menu items */
-    align-items: center; /* Center items vertically */
-    position: relative; /* Needed for absolute positioning of elements */
-}
-
-/* Navigation menu styles */
-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* This will push the logo to the left and the nav container to the right */
+    background-color: #fdf3fa;
+    padding: 20px;
+}
+
+.logo {
+    margin-right: auto; /* Pushes everything else to the right */
+}
+
+.nav-container {
+    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    justify-content: center; /* This will center the nav within the nav-container */
 }
 
 nav ul {
-    list-style: none; /* Remove default list styles */
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     gap: 100px; /* Space between menu items */
 }
+
 
 nav ul li {
     /* Styles for each menu item if needed */
 }
 
 nav a {
-    text-decoration: none; /* Remove underline from links */
-    color: #5a4638; /* Dark brown text color to match the header */
-    font-weight: bold; /* Make the font bold */
+    text-decoration: none;
+    color: #5a4638;
+    font-weight: bold;
 }
+
+/* Rest of your styles */
+
+
 
 /* Logo styles */
 .logo img {
     max-height: 50px; /* Adjust the size as needed */
-    width: auto; /* This will keep the aspect ratio intact */
+    width: auto; /* This will keep the aspect ratio intact */;
 }
 
 /* Apply background color to the body */
 body {
-    background-color: #e4d5b7; /* Warm sandy background for the body */
+    background-color: #edccf6dc; /* Warm sandy background for the body */
     color: #5a4638; /* Dark brown text color for overall text */
     font-family: 'Roboto', sans-serif; /* Modern, clean font */
     line-height: 1.6; /* Improve text readability */
@@ -54,6 +62,7 @@ body {
 
 /* Content styles */
 main {
+    background-color: #e2a9e4; /* Warm sandy background for the body */
     padding: 20px;
     border-radius: 8px; /* Soften edges */
 }
@@ -81,5 +90,51 @@ button:hover {
 
     .logo img {
         max-height: 40px; /* Adjust logo size for smaller screens */
+    }
+}
+
+
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+.heart-container::before,
+.heart-container::after {
+    content: '♥';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    color: pink;
+    user-select: none;
+    animation: floatUp 5s infinite ease-in;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+.heart-container::after {
+    left: 20%;
+    transform: translateX(-20%); /* Adjust the translation based on the left value */
+    animation-delay: 2s;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
     }
 }
