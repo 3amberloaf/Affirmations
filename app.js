@@ -10,6 +10,7 @@ app.use(express.static('public'));
 
 // Define a route to handle requests for the homepage
 app.get('/', (req, res) => {
+    res.render('index'); //Create one for each page
 });
 
 // Start the server
