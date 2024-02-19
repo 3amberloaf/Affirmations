@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Optionally, make sure the main content is visible
         document.querySelector('main').style.display = 'block';
-    }, 10000); // Example: 5000 milliseconds = 5 seconds for the GIF to complete
+    }, 4000); // Example: 5000 milliseconds = 5 seconds for the GIF to complete
 });
